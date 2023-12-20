@@ -1,7 +1,7 @@
 #include <cstdint>
 #include <iostream>
 
-auto main() -> int32_t{
-    std::cout <<"Hello World!!" <<std::endl;
-    return 0;
+auto main() -> int32_t {
+  std::cout << "Hello World!!" << std::endl;
+  return 0;
 }
