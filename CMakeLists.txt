@@ -92,7 +92,7 @@ add_subdirectory(${${PROJECT_NAME}_MODULE_PATH})
 add_subdirectory(${${PROJECT_NAME}_APPLICATION_PATH})
 
 set(${PROJECT_NAME}_SOURCE_FILES
-
+  src/main.cpp
   # ! Add source files here
 )
 
@@ -102,9 +102,9 @@ set(${PROJECT_NAME}_SOURCE_FILES
 # )
 
 # ! If you want to make an executable, use the following code
-# add_executable(${PROJECT_NAME}
-# ${${PROJECT_NAME}_SOURCE_FILES}
-# )
+add_executable(${PROJECT_NAME}
+${${PROJECT_NAME}_SOURCE_FILES}
+)
 
 # ! If you want to add include directories and link libraries, use the following code
 # target_include_directories(${PROJECT_NAME} PUBLIC
@@ -120,9 +120,9 @@ set(${PROJECT_NAME}_SOURCE_FILES
 
 # ! Add dependencies here
 # )
-# target_compile_options(${PROJECT_NAME} PRIVATE
-# ${CPP_COMFILE_FLAGS}
-# )
+target_compile_options(${PROJECT_NAME} PRIVATE
+${CPP_COMFILE_FLAGS}
+)
 message(STATUS)
 message(STATUS "Finished all process in ${PROJECT_NAME} CMakeLists.txt.")
 message(STATUS)
